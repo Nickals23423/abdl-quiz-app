@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blush hover:bg-blush/80 text-ink px-6 py-3 rounded-2xl font-medium shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-sky hover:bg-sky/80 text-ink px-6 py-3 rounded-2xl font-medium shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white/50 backdrop-blur-sm rounded-3xl p-6 shadow-sm border border-white/20;
+  }
+  
+  .quiz-option {
+    @apply bg-white/70 hover:bg-lilac/50 border border-lilac/30 rounded-2xl p-4 cursor-pointer transition-all duration-200 hover:shadow-md;
+  }
+  
+  .quiz-option.selected {
+    @apply bg-lilac border-lilac shadow-md;
+  }
+}
